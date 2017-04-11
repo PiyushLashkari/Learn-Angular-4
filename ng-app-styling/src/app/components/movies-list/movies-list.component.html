@@ -1,0 +1,9 @@
+<md-toolbar color="secondary">
+  <span>Star War Movies</span>
+</md-toolbar>
+
+<md-list>
+  <md-list-item *ngFor="let movie of movies">
+    <h3 md-line>{{movie.title}}</h3>
+  </md-list-item>
+</md-list>
