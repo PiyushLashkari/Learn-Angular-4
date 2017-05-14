@@ -1,0 +1,19 @@
+.myContainer{
+    background-color: lightblue;
+    padding: 15px;
+}
+
+.myBtn{
+    margin-top: 25px;
+}
+
+.myBtn.disabled, .myBtn:disabled{
+    background-color: lightslategray;
+    border-color: lightslategray;
+}
+
+.alert{
+    padding: 1px;
+    border: none;
+    color: lightslategray;
+}
