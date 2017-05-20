@@ -1,0 +1,39 @@
+.myNavbar{
+    background-color: lightblue;
+}
+
+.myContainer{
+    padding: 10px;
+    background-color: lightsteelblue;
+}
+
+.myBtn{
+    margin-top: 15px;
+}
+
+.myBtn.disabled, .myBtn:disabled{
+    background-color: grey;
+    border-color: grey;
+}
+
+.alert{
+    background: transparent;
+    border: none;
+    padding: 1px;
+    color: red;
+    font-size: 13px;
+}
+
+.pageHeading{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.loginForm{
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

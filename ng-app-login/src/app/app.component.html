@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light myNavbar">
+  <h1 class="navbar-brand">My Form</h1>
+</nav>
+
+<div *ngIf="!name; else frmInfo" class="loginForm">
+  <div class="row justify-content-md-center">
+    <span class="pageHeading">
+      Login
+    </span>
+  </div>
+  <div class="row justify-content-md-center">    
+    <div class="col-12">
+      <form [formGroup] = "rForm" (ngSubmit) = "addPost(rForm.value)">
+        <div class="form-group">
+          <label for="txtName">Name</label>
+          <input type="text" id="txtName" class="form-control" formControlName="name">
+          <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">{{nameAlert}}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="txtPassword">Password</label>
+          <input type="password" id="txtPassword" class="form-control" rows="3" formControlName="password">
+          <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">{{passwordAlert}}</div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <button type="submit" class="btn btn-primary myBtn" [disabled] = "!rForm.valid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<ng-template #frmInfo>
+  <div class="container myContainer">
+    <div class="row justify-content-md-center">
+      <div class="col-6">
+        <span>Welcome, {{name}}</span>
+      </div>
+    </div>
+  </div>
+</ng-template>
